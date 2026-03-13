@@ -33,6 +33,21 @@
 * **Concept:** Using `fork()` to clone the process so the parent can return to `accept()` while the child handles the client.
 * **Task:** Implement `fork()`. Manage "zombie processes" using `waitpid`.
 
+### Lesson 6: The Makefile (Automation via Rule-Based Logic)
+* **Concept:** A set of rules to automate builds and manage incremental compilation.
+* **Task:** 1. Split the Echo Server into `server.c`, `network_utils.c`, and `network_utils.h`. 2. Write a Makefile with a default target and a `clean` target. 3. Use variables for `CC` and `CFLAGS`.
+* **Why it matters:** Ensures every developer builds the exact same binary with specific compiler flags for optimization or alignment.
+
+### Lesson 7: CMake (The Meta-Build System)
+* **Concept:** A meta-build tool that generates platform-specific build files (like Makefiles).
+* **Task:** 1. Create a `CMakeLists.txt` file. 2. Use `add_executable`. 3. Learn the "Out-of-Source Build" pattern (`mkdir build && cd build && cmake .. && make`).
+* **Why it matters:** Used extensively in modern C/C++ infrastructure (like at AWS) to handle complex dependencies and multi-platform builds.
+
+### Lesson 8: The GDB Integration (Debugging the Logic)
+* **Concept:** Using the GNU Debugger to fight logic bugs and segmentation faults.
+* **Task:** 1. Intentionally introduce a "Segmentation Fault". 2. Run the server through `gdb ./echo_server`. 3. Use `run`, `backtrace`, and `print`.
+* **Why it matters:** Knowing how to attach GDB to a running process without a GUI is a systems engineering superpower.
+
 
 ## Phase 1 Resources
 
